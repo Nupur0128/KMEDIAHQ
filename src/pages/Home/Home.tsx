@@ -1,7 +1,6 @@
-
 import Hero from "./sections/Hero";
 import TrustedBy from "./sections/TrustedBy";
-import ContentProduction from "./sections/HowItWorks";
+import HowItWorks from "./sections/HowItWorks";
 import ContentRepurposing from "./sections/ContentRepurposing";
 import CreativeExecution from "./sections/CreativeExecution";
 import LongFormContent from "./sections/LongFormContent";
@@ -13,7 +12,6 @@ import Testimonials from "./sections/Testimonials";
 import ValueProposition from "./sections/ValueProposition";
 import FinalCTA from "./sections/FinalCTA";
 import FAQ from "./sections/FAQ";
-import HowItWorks from "./sections/HowItWorks";
 
 export default function Home() {
   return (

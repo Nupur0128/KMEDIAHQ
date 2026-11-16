@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import {
   Building2,
@@ -18,15 +17,9 @@ const audiences = [
 
 export default function TrustedBy() {
   return (
-    <section className="w-full border-y border-white/[.07] bg-[#030809] px-5 py-16 text-white sm:px-8 lg:px-12 box-border">
-      <div
-        className="w-full"
-        style={{
-          maxWidth: "1250px",
-          marginInline: "auto",
-        }}
-      >
-        <p className="text-center text-[10px] font-bold uppercase tracking-[.22em] text-white/35">
+    <section className="w-full border-y border-white/10 bg-[#030809] py-14 sm:py-16 text-white">
+      <div className="mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12">
+        <p className="text-center text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#FFB84A]/70">
           Built to support ambitious teams
         </p>
 
@@ -34,16 +27,16 @@ export default function TrustedBy() {
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-9 flex flex-wrap items-center justify-center gap-x-10 gap-y-7 lg:justify-between"
+          className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-5 sm:gap-x-10 sm:gap-y-6 lg:justify-between"
         >
           {audiences.map(({ icon: Icon, label }) => (
             <div
               key={label}
-              className="flex items-center gap-3 text-sm font-medium text-white/55"
+              className="flex items-center gap-2.5 sm:gap-3 text-xs sm:text-sm font-medium text-white/60"
             >
               <Icon
-                size={19}
-                className="shrink-0 text-[#FFB84A]/80"
+                size={18}
+                className="shrink-0 text-[#FFB84A]"
                 strokeWidth={1.5}
               />
               {label}
@@ -51,7 +44,7 @@ export default function TrustedBy() {
           ))}
         </motion.div>
 
-        <p className="mt-8 text-center text-[11px] text-white/25">
+        <p className="mt-7 text-center text-[11px] text-white/30">
           Add approved client logos here when brand permissions and final assets
           are available.
         </p>

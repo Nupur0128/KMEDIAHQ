@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import {
   ArrowUpRight,
@@ -34,7 +33,7 @@ const formats = [
 
 export default function ContentRepurposing() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#030809] px-5 py-24 text-white sm:px-8 lg:px-12 lg:py-32 box-border">
+    <section className="relative w-full overflow-hidden bg-[#030809] py-20 sm:py-24 lg:py-28 text-white">
       {/* Grid Background */}
       <div
         className="pointer-events-none absolute inset-0 opacity-30"
@@ -46,13 +45,7 @@ export default function ContentRepurposing() {
       />
 
       {/* Centered Content Container */}
-      <div
-        className="relative grid w-full min-w-0 gap-14 lg:grid-cols-[.9fr_1.1fr] lg:items-center"
-        style={{
-          maxWidth: "1250px",
-          marginInline: "auto",
-        }}
-      >
+      <div className="relative mx-auto grid w-full max-w-7xl min-w-0 gap-12 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-16 lg:px-12">
         {/* Left Content */}
         <motion.div
           initial={{ opacity: 0, y: 22 }}
@@ -61,18 +54,18 @@ export default function ContentRepurposing() {
           transition={{ duration: 0.65 }}
           className="min-w-0"
         >
-          <p className="mb-5 text-xs font-bold uppercase tracking-[.2em] text-[#FFB84A]">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#FFB84A]">
             One idea. More impact.
           </p>
 
-          <h2 className="max-w-xl font-heading text-4xl font-medium leading-[1.08] tracking-[-.045em] sm:text-5xl lg:text-6xl">
+          <h2 className="mt-3 sm:mt-4 max-w-xl font-heading text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.15]">
             Make every piece of content{" "}
             <span className="font-serif italic text-[#FFB84A]">
               work harder.
             </span>
           </h2>
 
-          <p className="mt-6 max-w-lg text-base leading-8 text-white/55">
+          <p className="mt-4 sm:mt-5 max-w-lg text-sm sm:text-base leading-relaxed text-white/55">
             We turn your core content into a connected library of platform-ready
             assets—so your best ideas reach more people without starting from
             scratch every time.
@@ -80,14 +73,15 @@ export default function ContentRepurposing() {
 
           <Link
             to="/services"
-            className="mt-8 inline-flex items-center gap-3 text-sm font-semibold text-[#FFB84A] transition hover:gap-5"
+            className="mt-6 sm:mt-8 inline-flex items-center gap-2.5 text-sm font-semibold text-[#FFB84A] transition-all hover:gap-3.5"
           >
-            Explore content services <ArrowUpRight size={17} />
+            <span>Explore content services</span>
+            <ArrowUpRight size={16} />
           </Link>
         </motion.div>
 
         {/* Right Content Cards */}
-        <div className="grid min-w-0 gap-3 sm:grid-cols-2">
+        <div className="grid min-w-0 gap-4 sm:grid-cols-2 sm:gap-5">
           {formats.map(({ icon: Icon, title, text }, i) => (
             <motion.div
               key={title}
@@ -95,15 +89,15 @@ export default function ContentRepurposing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
-              className="group min-w-0 rounded-2xl border border-white/10 bg-white/[.035] p-7 transition duration-300 hover:-translate-y-1 hover:border-[#FFB84A]/40 hover:bg-[#FFB84A]/[.055]"
+              className="group min-w-0 rounded-2xl border border-white/10 bg-white/[0.035] p-6 sm:p-7 transition duration-300 hover:-translate-y-0.5 hover:border-[#FFB84A]/40 hover:bg-[#FFB84A]/[0.05]"
             >
-              <div className="mb-8 flex h-11 w-11 items-center justify-center rounded-xl border border-[#FFB84A]/25 bg-[#FFB84A]/10 text-[#FFB84A]">
+              <div className="mb-5 sm:mb-6 flex h-11 w-11 items-center justify-center rounded-xl border border-[#FFB84A]/25 bg-[#FFB84A]/10 text-[#FFB84A]">
                 <Icon size={20} />
               </div>
 
-              <h3 className="text-lg font-semibold">{title}</h3>
+              <h3 className="text-base sm:text-lg font-semibold">{title}</h3>
 
-              <p className="mt-3 text-sm leading-7 text-white/50">
+              <p className="mt-2 sm:mt-2.5 text-sm leading-relaxed text-white/50">
                 {text}
               </p>
             </motion.div>

@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ArrowUpRight, Check } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -41,33 +40,27 @@ const plans = [
 
 export default function Packages() {
   return (
-    <section className="w-full box-border bg-[#050d0e] px-5 py-24 text-white sm:px-8 lg:px-12 lg:py-32">
-      <div
-        className="mx-auto w-full min-w-0"
-        style={{
-          maxWidth: "1250px",
-          marginInline: "auto",
-        }}
-      >
+    <section className="w-full bg-[#050d0e] py-20 sm:py-24 lg:py-28 text-white">
+      <div className="mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12">
         <div className="mx-auto w-full max-w-3xl text-center">
-          <p className="text-xs font-bold uppercase tracking-[.2em] text-[#FFB84A]">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#FFB84A]">
             Ways to work together
           </p>
 
-          <h2 className="mt-5 font-heading text-4xl font-medium tracking-[-.045em] sm:text-5xl lg:text-6xl">
+          <h2 className="mt-3 sm:mt-4 font-heading text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.15]">
             The right support for{" "}
             <span className="font-serif italic text-[#FFB84A]">
               your next stage.
             </span>
           </h2>
 
-          <p className="mt-5 text-base leading-8 text-white/50">
+          <p className="mt-4 sm:mt-5 text-sm sm:text-base leading-relaxed text-white/50">
             Every content operation is different. Start with a direction and we
             will shape the scope around your goals.
           </p>
         </div>
 
-        <div className="mt-14 grid min-w-0 gap-4 lg:grid-cols-3">
+        <div className="mt-12 sm:mt-16 grid min-w-0 gap-6 lg:grid-cols-3">
           {plans.map((plan, i) => (
             <motion.div
               key={plan.name}
@@ -75,61 +68,63 @@ export default function Packages() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
-              className={`relative flex min-w-0 flex-col rounded-2xl border p-7 sm:p-8 ${
+              className={`relative flex min-w-0 flex-col justify-between rounded-2xl border p-6 sm:p-8 transition-all duration-300 ${
                 plan.featured
-                  ? "border-[#FFB84A]/55 bg-[#FFB84A]/[.07]"
-                  : "border-white/10 bg-white/[.025]"
+                  ? "border-[#FFB84A]/55 bg-[#FFB84A]/[0.07] shadow-[0_0_40px_rgba(255,184,74,0.06)]"
+                  : "border-white/10 bg-white/[0.025] hover:border-white/20 hover:bg-white/[0.04]"
               }`}
             >
-              {plan.featured && (
-                <span className="absolute right-6 top-6 rounded-full bg-[#FFB84A] px-3 py-1.5 text-[9px] font-extrabold uppercase tracking-[.14em] text-[#080808]">
-                  Popular direction
-                </span>
-              )}
+              <div>
+                {plan.featured && (
+                  <span className="absolute right-6 top-6 rounded-full bg-[#FFB84A] px-3 py-1 text-[10px] font-extrabold uppercase tracking-wider text-[#030809]">
+                    Popular direction
+                  </span>
+                )}
 
-              <h3 className="pr-24 text-xl font-semibold">{plan.name}</h3>
+                <h3 className="text-xl font-semibold">{plan.name}</h3>
 
-              <p className="mt-3 min-h-12 text-sm leading-6 text-white/50">
-                {plan.intro}
-              </p>
+                <p className="mt-2.5 text-sm leading-relaxed text-white/50">
+                  {plan.intro}
+                </p>
 
-              <div className="my-7 h-px bg-white/10" />
+                <div className="my-6 h-px bg-white/10" />
 
-              <p className="text-xs font-bold uppercase tracking-[.15em] text-[#FFB84A]">
-                Potential inclusions
-              </p>
+                <p className="text-xs font-bold uppercase tracking-wider text-[#FFB84A]">
+                  Potential inclusions
+                </p>
 
-              <ul className="mt-5 flex-1 space-y-4">
-                {plan.items.map((item) => (
-                  <li
-                    key={item}
-                    className="flex gap-3 text-sm text-white/70"
-                  >
-                    <Check
-                      size={16}
-                      className="mt-0.5 shrink-0 text-[#FFB84A]"
-                    />
-                    {item}
-                  </li>
-                ))}
-              </ul>
+                <ul className="mt-4 space-y-3.5">
+                  {plan.items.map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-3 text-sm text-white/70"
+                    >
+                      <Check
+                        size={16}
+                        className="mt-0.5 shrink-0 text-[#FFB84A]"
+                      />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
               <Link
                 to="/contact"
-                className={`mt-9 inline-flex min-h-12 items-center justify-center gap-3 rounded-full px-5 text-sm font-semibold transition hover:-translate-y-0.5 ${
+                className={`mt-8 inline-flex h-12 w-full items-center justify-center gap-2.5 rounded-full text-sm font-semibold transition ${
                   plan.featured
-                    ? "bg-[#FFB84A] text-[#080808] hover:bg-[#FFD078]"
-                    : "border border-white/15 text-white hover:border-[#FFB84A]/50 hover:text-[#FFB84A]"
+                    ? "bg-[#FFB84A] text-[#030809] hover:bg-[#FFD078]"
+                    : "border border-white/20 text-white hover:border-[#FFB84A]/50 hover:text-[#FFB84A]"
                 }`}
               >
-                Discuss this package
-                <ArrowUpRight size={17} />
+                <span>Discuss this package</span>
+                <ArrowUpRight size={16} />
               </Link>
             </motion.div>
           ))}
         </div>
 
-        <p className="mt-6 text-center text-xs text-white/35">
+        <p className="mt-8 text-center text-xs text-white/35">
           These are starting engagement directions, not fixed-price packages.
           Final scope and pricing are agreed after discovery.
         </p>

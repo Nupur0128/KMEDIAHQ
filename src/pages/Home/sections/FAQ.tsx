@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
@@ -34,31 +33,22 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="w-full box-border bg-[#030809] px-5 py-24 text-white sm:px-8 lg:px-12 lg:py-32">
-
-      {/* Centered Content Container */}
-      <div
-        className="grid w-full min-w-0 gap-12 lg:grid-cols-[.75fr_1.25fr]"
-        style={{
-          maxWidth: "1250px",
-          marginInline: "auto",
-        }}
-      >
-
+    <section className="w-full bg-[#030809] py-20 sm:py-24 lg:py-28 text-white">
+      <div className="mx-auto grid w-full max-w-7xl min-w-0 gap-12 px-5 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16 lg:px-12">
         {/* Left Content */}
         <div className="min-w-0">
-          <p className="text-xs font-bold uppercase tracking-[.2em] text-[#FFB84A]">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#FFB84A]">
             Frequently asked questions
           </p>
 
-          <h2 className="mt-5 font-heading text-4xl font-medium tracking-[-.045em] sm:text-5xl">
+          <h2 className="mt-3 sm:mt-4 font-heading text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.15]">
             A few things you may{" "}
             <span className="font-serif italic text-[#FFB84A]">
               want to know.
             </span>
           </h2>
 
-          <p className="mt-6 max-w-sm text-sm leading-7 text-white/45">
+          <p className="mt-4 sm:mt-5 max-w-sm text-sm sm:text-base leading-relaxed text-white/50">
             Still have a question? Start a conversation and tell us what you
             are looking to build.
           </p>
@@ -72,14 +62,14 @@ export default function FAQ() {
                 type="button"
                 aria-expanded={open === i}
                 onClick={() => setOpen(open === i ? null : i)}
-                className="flex w-full items-center justify-between gap-5 py-6 text-left"
+                className="flex w-full items-center justify-between gap-4 py-5 text-left transition hover:text-[#FFB84A]"
               >
-                <span className="text-base font-medium text-white/85 sm:text-lg">
+                <span className="text-base font-medium text-white/90">
                   {item.q}
                 </span>
 
                 <ChevronDown
-                  size={19}
+                  size={18}
                   className={`shrink-0 text-[#FFB84A] transition-transform duration-300 ${
                     open === i ? "rotate-180" : ""
                   }`}
@@ -92,10 +82,10 @@ export default function FAQ() {
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.25 }}
                     className="overflow-hidden"
                   >
-                    <p className="max-w-2xl pb-6 pr-8 text-sm leading-7 text-white/50">
+                    <p className="max-w-2xl pb-5 pr-4 sm:pr-6 text-sm leading-relaxed text-white/50">
                       {item.a}
                     </p>
                   </motion.div>
@@ -104,7 +94,6 @@ export default function FAQ() {
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

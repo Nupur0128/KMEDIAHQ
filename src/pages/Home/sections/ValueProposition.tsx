@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Check, Compass, Gauge, MessageCircle, Target } from "lucide-react";
 
@@ -27,35 +26,29 @@ const values = [
 
 export default function ValueProposition() {
   return (
-    <section className="relative w-full box-border overflow-hidden bg-[#050d0e] px-5 py-24 text-white sm:px-8 lg:px-12 lg:py-32">
+    <section className="relative w-full overflow-hidden bg-[#050d0e] py-20 sm:py-24 lg:py-28 text-white">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(255,184,74,.07),transparent_55%)]" />
 
-      <div
-        className="relative mx-auto w-full min-w-0"
-        style={{
-          maxWidth: "1250px",
-          marginInline: "auto",
-        }}
-      >
+      <div className="relative mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12">
         <div className="w-full max-w-3xl">
-          <p className="text-xs font-bold uppercase tracking-[.2em] text-[#FFB84A]">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#FFB84A]">
             Why KMEDIAHQ
           </p>
 
-          <h2 className="mt-5 font-heading text-4xl font-medium tracking-[-.045em] sm:text-5xl lg:text-6xl">
+          <h2 className="mt-3 sm:mt-4 font-heading text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.15]">
             More than content.{" "}
             <span className="font-serif italic text-[#FFB84A]">
               A growth partner.
             </span>
           </h2>
 
-          <p className="mt-6 max-w-2xl text-base leading-8 text-white/55">
+          <p className="mt-4 sm:mt-5 max-w-2xl text-sm sm:text-base leading-relaxed text-white/55">
             We bring the moving parts of content together, giving your brand the
             clarity and consistency to show up with confidence.
           </p>
         </div>
 
-        <div className="mt-14 grid min-w-0 gap-4 md:grid-cols-2">
+        <div className="mt-12 sm:mt-16 grid min-w-0 gap-5 sm:gap-6 md:grid-cols-2">
           {values.map(({ icon: Icon, title, text }, i) => (
             <motion.div
               key={title}
@@ -63,19 +56,19 @@ export default function ValueProposition() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
-              className="flex min-w-0 gap-5 rounded-2xl border border-white/10 bg-[#030809]/60 p-6 sm:p-8"
+              className="flex min-w-0 items-start gap-4 sm:gap-5 rounded-2xl border border-white/10 bg-[#030809]/60 p-6 sm:p-7 transition duration-300 hover:border-[#FFB84A]/30"
             >
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#FFB84A]/25 bg-[#FFB84A]/10 text-[#FFB84A]">
-                <Icon size={22} />
+              <div className="flex h-11 w-11 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-xl border border-[#FFB84A]/25 bg-[#FFB84A]/10 text-[#FFB84A]">
+                <Icon size={20} />
               </div>
 
               <div className="min-w-0">
-                <h3 className="flex items-center gap-2 text-lg font-semibold">
+                <h3 className="flex items-center gap-2 text-base sm:text-lg font-semibold">
                   <Check size={15} className="shrink-0 text-[#FFB84A]" />
-                  {title}
+                  <span>{title}</span>
                 </h3>
 
-                <p className="mt-3 text-sm leading-7 text-white/50">
+                <p className="mt-2 text-sm leading-relaxed text-white/50">
                   {text}
                 </p>
               </div>

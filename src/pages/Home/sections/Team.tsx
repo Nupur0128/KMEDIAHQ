@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import {
   ArrowUpRight,
@@ -34,27 +33,21 @@ const roles = [
 
 export default function Team() {
   return (
-    <section className="w-full box-border bg-[#030809] px-5 py-24 text-white sm:px-8 lg:px-12 lg:py-32">
-      <div
-        className="mx-auto grid w-full min-w-0 gap-12 lg:grid-cols-[.85fr_1.15fr]"
-        style={{
-          maxWidth: "1250px",
-          marginInline: "auto",
-        }}
-      >
+    <section className="w-full bg-[#030809] py-20 sm:py-24 lg:py-28 text-white">
+      <div className="mx-auto grid w-full max-w-7xl min-w-0 gap-12 px-5 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:gap-16 lg:px-12">
         <div className="min-w-0">
-          <p className="text-xs font-bold uppercase tracking-[.2em] text-[#FFB84A]">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#FFB84A]">
             The people behind the process
           </p>
 
-          <h2 className="mt-5 font-heading text-4xl font-medium tracking-[-.045em] sm:text-5xl">
+          <h2 className="mt-3 sm:mt-4 font-heading text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.15]">
             A connected team for{" "}
             <span className="font-serif italic text-[#FFB84A]">
               every moving part.
             </span>
           </h2>
 
-          <p className="mt-6 text-base leading-8 text-white/50">
+          <p className="mt-4 sm:mt-5 text-sm sm:text-base leading-relaxed text-white/50">
             Great content takes different skills working in sync. Our model
             brings strategic thinking, creative craft and reliable execution
             together around your brand.
@@ -62,14 +55,14 @@ export default function Team() {
 
           <Link
             to="/about"
-            className="mt-8 inline-flex items-center gap-3 text-sm font-semibold text-[#FFB84A] transition-all hover:gap-5"
+            className="mt-6 sm:mt-8 inline-flex items-center gap-2.5 text-sm font-semibold text-[#FFB84A] transition-all hover:gap-3.5"
           >
-            Get to know us
-            <ArrowUpRight size={17} />
+            <span>Get to know us</span>
+            <ArrowUpRight size={16} />
           </Link>
         </div>
 
-        <div className="grid min-w-0 gap-3 sm:grid-cols-2">
+        <div className="grid min-w-0 gap-4 sm:grid-cols-2 sm:gap-5">
           {roles.map(({ icon: Icon, title, text }, i) => (
             <motion.div
               key={title}
@@ -77,15 +70,15 @@ export default function Team() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
-              className="min-w-0 rounded-2xl border border-white/10 bg-white/[.03] p-7"
+              className="min-w-0 rounded-2xl border border-white/10 bg-white/[0.03] p-6 sm:p-7 transition duration-300 hover:border-[#FFB84A]/30 hover:bg-white/[0.04]"
             >
-              <div className="mb-8 flex h-11 w-11 items-center justify-center rounded-xl bg-[#FFB84A]/10 text-[#FFB84A]">
-                <Icon size={21} />
+              <div className="mb-5 sm:mb-6 flex h-11 w-11 items-center justify-center rounded-xl bg-[#FFB84A]/10 text-[#FFB84A]">
+                <Icon size={20} />
               </div>
 
-              <h3 className="text-lg font-semibold">{title}</h3>
+              <h3 className="text-base sm:text-lg font-semibold">{title}</h3>
 
-              <p className="mt-3 text-sm leading-7 text-white/50">
+              <p className="mt-2 text-sm leading-relaxed text-white/50">
                 {text}
               </p>
             </motion.div>

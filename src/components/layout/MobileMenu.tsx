@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowUpRight, X } from "lucide-react";
@@ -17,13 +16,9 @@ const links = [
   { name: "Contact", path: "/contact" },
 ];
 
-export default function MobileMenu({
-  isOpen,
-  onClose,
-}: MobileMenuProps) {
+export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
-
     return () => {
       document.body.style.overflow = "";
     };
@@ -36,9 +31,10 @@ export default function MobileMenu({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-[100] bg-[#101010] text-white lg:hidden"
+          className="fixed inset-0 z-[100] flex flex-col bg-[#030809] text-white lg:hidden overflow-y-auto"
         >
-          <div className="flex h-20 items-center justify-between border-b border-white/10 px-6">
+          {/* TOP BAR */}
+          <div className="flex h-20 shrink-0 items-center justify-between border-b border-white/10 px-5 sm:px-8">
             <Link
               to="/"
               onClick={onClose}
@@ -51,46 +47,48 @@ export default function MobileMenu({
               type="button"
               onClick={onClose}
               aria-label="Close navigation"
-              className="flex h-11 w-11 items-center justify-center border border-white/20"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white transition hover:border-[#E32132] hover:text-[#E32132]"
             >
-              <X size={22} />
+              <X size={20} />
             </button>
           </div>
 
-          <nav className="flex flex-col px-6 pt-12">
+          {/* NAV LINKS */}
+          <nav className="flex flex-col px-5 sm:px-8 pt-6 sm:pt-8">
             {links.map((link, i) => (
               <motion.div
                 key={link.path}
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.08 }}
+                transition={{ delay: i * 0.06 }}
               >
                 <Link
                   to={link.path}
                   onClick={onClose}
-                  className="flex items-center justify-between border-b border-white/10 py-6 font-heading text-3xl font-semibold"
+                  className="flex items-center justify-between border-b border-white/10 py-4 sm:py-5 font-heading text-2xl sm:text-3xl font-semibold transition hover:text-[#FFB84A]"
                 >
                   {link.name}
                   <ArrowUpRight
-                    size={22}
-                    className="text-[#E32132]"
+                    size={20}
+                    className="text-[#FFB84A]"
                   />
                 </Link>
               </motion.div>
             ))}
           </nav>
 
-          <div className="px-6 pt-10">
+          {/* BOTTOM CTA */}
+          <div className="mt-auto px-5 sm:px-8 py-8">
             <Link
               to="/contact"
               onClick={onClose}
-              className="flex min-h-14 items-center justify-between bg-[#E32132] px-5 text-xs font-bold uppercase tracking-wider"
+              className="flex h-12 w-full items-center justify-between rounded-full bg-[#E32132] px-6 text-xs font-bold uppercase tracking-wider text-white transition hover:bg-white hover:text-[#030809]"
             >
-              Book a discovery call
-              <ArrowUpRight size={20} />
+              <span>Book a discovery call</span>
+              <ArrowUpRight size={18} />
             </Link>
 
-            <p className="mt-8 text-[10px] uppercase tracking-[.2em] text-white/35">
+            <p className="mt-5 text-center text-[10px] uppercase tracking-[0.2em] text-white/35">
               Content. Storytelling. Production. Distribution.
             </p>
           </div>
