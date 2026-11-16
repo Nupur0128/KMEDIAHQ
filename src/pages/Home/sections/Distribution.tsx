@@ -50,7 +50,7 @@ export default function Distribution() {
 
           <Link
             to="/contact"
-            className="mt-8 inline-flex h-12 items-center gap-2.5 rounded-full bg-[#FFB84A] px-6 text-sm font-semibold text-[#030809] transition hover:-translate-y-0.5 hover:bg-[#FFD078]"
+            className="mt-8 inline-flex h-12 items-center gap-2.5 rounded-full bg-[#E32132] px-6 text-sm font-semibold text-white shadow-[0_0_25px_rgba(227,33,50,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-[#030809]"
           >
             <span>Build your content system</span>
             <ArrowUpRight size={16} />

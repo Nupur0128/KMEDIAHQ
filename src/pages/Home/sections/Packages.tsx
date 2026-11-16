@@ -70,13 +70,13 @@ export default function Packages() {
               transition={{ delay: i * 0.08 }}
               className={`relative flex min-w-0 flex-col justify-between rounded-2xl border p-6 sm:p-8 transition-all duration-300 ${
                 plan.featured
-                  ? "border-[#FFB84A]/55 bg-[#FFB84A]/[0.07] shadow-[0_0_40px_rgba(255,184,74,0.06)]"
+                  ? "border-[#E32132]/50 bg-[#E32132]/[0.05] shadow-[0_0_40px_rgba(227,33,50,0.12)]"
                   : "border-white/10 bg-white/[0.025] hover:border-white/20 hover:bg-white/[0.04]"
               }`}
             >
               <div>
                 {plan.featured && (
-                  <span className="absolute right-6 top-6 rounded-full bg-[#FFB84A] px-3 py-1 text-[10px] font-extrabold uppercase tracking-wider text-[#030809]">
+                  <span className="absolute right-6 top-6 rounded-full bg-[#E32132] px-3 py-1 text-[10px] font-extrabold uppercase tracking-wider text-white shadow-[0_0_15px_rgba(227,33,50,0.5)]">
                     Popular direction
                   </span>
                 )}
@@ -113,7 +113,7 @@ export default function Packages() {
                 to="/contact"
                 className={`mt-8 inline-flex h-12 w-full items-center justify-center gap-2.5 rounded-full text-sm font-semibold transition ${
                   plan.featured
-                    ? "bg-[#FFB84A] text-[#030809] hover:bg-[#FFD078]"
+                    ? "bg-[#E32132] text-white hover:bg-white hover:text-[#030809] shadow-[0_0_20px_rgba(227,33,50,0.35)]"
                     : "border border-white/20 text-white hover:border-[#FFB84A]/50 hover:text-[#FFB84A]"
                 }`}
               >

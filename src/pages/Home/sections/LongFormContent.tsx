@@ -26,20 +26,20 @@ export default function LongFormContent() {
           <div className="relative flex aspect-[4/3] flex-col justify-between rounded-xl border border-white/10 bg-[#101b1b] p-5 sm:p-6">
             <div className="flex items-center justify-between">
               <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/30 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-white/70">
-                <FaYoutube size={13} className="text-[#FFB84A]" />
+                <FaYoutube size={13} className="text-[#E32132]" />
                 Long-form studio
               </span>
 
               <span className="text-xs text-white/40">01 / 04</span>
             </div>
 
-            <div className="mx-auto flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-full border border-[#FFB84A]/50 bg-[#FFB84A] text-[#030809] shadow-[0_0_40px_rgba(255,184,74,.25)]">
+            <div className="mx-auto flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-full border border-[#E32132]/50 bg-[#E32132] text-white shadow-[0_0_40px_rgba(227,33,50,.35)]">
               <Play size={22} fill="currentColor" className="ml-0.5" />
             </div>
 
             <div>
               <div className="mb-2.5 h-1.5 overflow-hidden rounded-full bg-white/10">
-                <div className="h-full w-[62%] rounded-full bg-[#FFB84A]" />
+                <div className="h-full w-[62%] rounded-full bg-[#E32132]" />
               </div>
 
               <div className="flex justify-between text-[10px] uppercase tracking-[0.14em] text-white/40">

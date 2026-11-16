@@ -30,7 +30,8 @@ export default function Hero() {
           transition={{ duration: 0.7 }}
           className="mb-7 sm:mb-8"
         >
-          <span className="inline-flex items-center justify-center whitespace-nowrap rounded-full border border-[#FFB84A]/40 bg-[#FFB84A]/[0.13] px-5 py-2.5 text-[10px] font-bold uppercase tracking-[0.16em] text-[#FFB84A] sm:px-7 sm:py-3 sm:text-xs sm:tracking-[0.18em]">
+          <span className="inline-flex items-center justify-center whitespace-nowrap rounded-full border border-white/15 bg-white/[0.04] px-5 py-2.5 text-[10px] font-bold uppercase tracking-[0.16em] text-white/90 sm:px-7 sm:py-3 sm:text-xs sm:tracking-[0.18em]">
+            <span className="mr-2.5 h-2 w-2 rounded-full bg-[#E32132] shadow-[0_0_8px_#E32132] animate-pulse" />
             CONTENT. STORYTELLING. DISTRIBUTION.
           </span>
         </motion.div>
@@ -71,7 +72,7 @@ export default function Hero() {
           {/* Primary CTA */}
           <Link
             to="/contact"
-            className="group inline-flex min-h-[60px] min-w-[200px] items-center justify-center gap-4 whitespace-nowrap rounded-full bg-[#FFB84A] !px-9 py-4 text-md font-semibold text-[#080808] transition-all duration-300 hover:-translate-y-1 hover:bg-[#FFD078] sm:!px-6"
+            className="group inline-flex min-h-[60px] min-w-[200px] items-center justify-center gap-4 whitespace-nowrap rounded-full bg-[#E32132] !px-9 py-4 text-md font-semibold text-white shadow-[0_0_30px_rgba(227,33,50,0.35)] transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-[#030809] sm:!px-6"
           >
             <span>Book a Discovery Call</span>
 

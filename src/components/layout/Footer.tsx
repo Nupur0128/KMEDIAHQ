@@ -6,6 +6,7 @@ const quickLinks = [
   { label: "Services", path: "/services" },
   { label: "Our Work", path: "/work" },
   { label: "About", path: "/about" },
+  { label: "Book a Call", path: "/booking" },
   { label: "Contact", path: "/contact" },
 ];
 
@@ -85,6 +86,10 @@ export default function Footer() {
 
             <Link to="/terms-and-conditions" className="hover:text-white transition">
               Terms & Conditions
+            </Link>
+
+            <Link to="/legal" className="hover:text-white transition">
+              Legal Hub
             </Link>
           </div>
 

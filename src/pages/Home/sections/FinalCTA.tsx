@@ -46,7 +46,7 @@ export default function FinalCTA() {
           <div className="mt-8 sm:mt-10 flex flex-col items-center justify-center gap-3.5 sm:flex-row">
             <Link
               to="/contact"
-              className="inline-flex h-12 sm:h-13 w-full sm:w-auto items-center justify-center gap-2.5 rounded-full bg-[#FFB84A] px-7 sm:px-8 text-sm font-semibold text-[#030809] transition hover:-translate-y-0.5 hover:bg-[#FFD078]"
+              className="inline-flex h-12 sm:h-13 w-full sm:w-auto items-center justify-center gap-2.5 rounded-full bg-[#E32132] px-7 sm:px-8 text-sm font-semibold text-white shadow-[0_0_30px_rgba(227,33,50,0.4)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-[#030809]"
             >
               <span>Book a Discovery Call</span>
               <ArrowUpRight size={17} />

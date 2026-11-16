@@ -73,7 +73,7 @@ export default function ContentRepurposing() {
 
           <Link
             to="/services"
-            className="mt-6 sm:mt-8 inline-flex items-center gap-2.5 text-sm font-semibold text-[#FFB84A] transition-all hover:gap-3.5"
+            className="mt-6 sm:mt-8 inline-flex items-center gap-2.5 text-sm font-semibold text-[#E32132] transition-all hover:gap-3.5 hover:text-white"
           >
             <span>Explore content services</span>
             <ArrowUpRight size={16} />
