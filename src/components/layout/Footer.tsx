@@ -6,6 +6,7 @@ const quickLinks = [
   { label: "Services", path: "/services" },
   { label: "Our Work", path: "/work" },
   { label: "About", path: "/about" },
+  { label: "Global Partnership", path: "/partnership" },
   { label: "Book a Call", path: "/booking" },
   { label: "Contact", path: "/contact" },
 ];

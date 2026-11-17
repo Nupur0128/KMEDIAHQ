@@ -13,6 +13,7 @@ import Contact from "./pages/Contact/Contact";
 import Legal from "./pages/Legal/Legal";
 import PrivacyPolicy from "./pages/Legal/PrivacyPolicy";
 import TermsConditions from "./pages/Legal/TermsConditions";
+import Partnership from "./pages/Partnership/Partnership";
 
 function NotFound() {
   return (
@@ -58,6 +59,10 @@ export default function App() {
             <Route path="/booking" element={<Booking />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/legal" element={<Legal />} />
+            <Route path="/partnership" element={<Partnership />} />
+            <Route path="/partners" element={<Partnership />} />
+            <Route path="/global-partner" element={<Partnership />} />
+            <Route path="/creators" element={<Partnership />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/terms-and-conditions" element={<TermsConditions />} />

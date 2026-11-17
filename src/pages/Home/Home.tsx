@@ -4,6 +4,7 @@ import HowItWorks from "./sections/HowItWorks";
 import ContentRepurposing from "./sections/ContentRepurposing";
 import CreativeExecution from "./sections/CreativeExecution";
 import LongFormContent from "./sections/LongFormContent";
+import ShortFormContent from "./sections/ShortFormContent";
 import Distribution from "./sections/Distribution";
 import Packages from "./sections/Packages";
 import Process from "./sections/Process";
@@ -22,6 +23,7 @@ export default function Home() {
       <ContentRepurposing />
       <CreativeExecution />
       <LongFormContent />
+      <ShortFormContent />
       <Distribution />
       <Packages />
       <Process />

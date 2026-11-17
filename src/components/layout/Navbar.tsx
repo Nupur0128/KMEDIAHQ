@@ -97,6 +97,10 @@ export default function Navbar() {
               Portfolio
             </NavLink>
 
+            <NavLink to="/partnership" className={linkStyle}>
+              Partnership
+            </NavLink>
+
             <NavLink to="/contact" className={linkStyle}>
               Contact
             </NavLink>
